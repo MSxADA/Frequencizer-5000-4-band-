@@ -185,20 +185,28 @@
             };
 
             const presets = {
-                'Fuller Bass & Warmth': { description: 'Adds low-end weight and midrange warmth for a richer sound.', knobs: { '20': '1:30 o\'clock', '400': '1 o\'clock', '2k': '11:30 o\'clock', '8k': '12 o\'clock' }},
-                'V-Shape (Classic Rock & Pop)': { description: 'Boosts bass and treble for an energetic, classic "V-shape" sound.', knobs: { '20': '2 o\'clock', '400': '10:30 o\'clock', '2k': '10:30 o\'clock', '8k': '1:30 o\'clock' }},
-                'Vocal Clarity': { description: 'Brings vocals forward by focusing on the core midrange frequencies.', knobs: { '20': '11:30 o\'clock', '400': '12:30 o\'clock', '2k': '1:30 o\'clock', '8k': '12:30 o\'clock' }},
-                'Smooth & Relaxed': { description: 'Gently rolls off the highs for a less fatiguing, laid-back listen.', knobs: { '20': '12:30 o\'clock', '400': '12:30 o\'clock', '2k': '11 o\'clock', '8k': '10:30 o\'clock' }},
-                'Late Night Listening': { description: 'A loudness curve that boosts bass and treble for a full sound at low volumes.', knobs: { '20': '1:30 o\'clock', '400': '12 o\'clock', '2k': '12:30 o\'clock', '8k': '1:30 o\'clock' }},
-                'Theater (Movies)': { description: 'Adds cinematic impact with powerful bass and clear dialogue.', knobs: { '20': '2 o\'clock', '400': '12:30 o\'clock', '2k': '1 o\'clock', '8k': '1:30 o\'clock' }},
-                'Gaming': { description: 'Enhances positional audio cues and immersion by clarifying critical sound details.', knobs: { '20': '1 o\'clock', '400': '11 o\'clock', '2k': '1:30 o\'clock', '8k': '1 o\'clock' }},
+                'Fuller Bass & Warmth': { description: 'Adds mid-bass punch and warmth, ideal for systems with capable subwoofers.', knobs: { '20': '1:30 o\'clock', '400': '12:30 o\'clock', '2k': '11:30 o\'clock', '8k': '12 o\'clock' }},
+                'Energetic & Forward': { description: 'Brings vocals and lead instruments to the front without harshness. Perfect for detailed speaker systems.', knobs: { '20': '11:30 o\'clock', '400': '1 o\'clock', '2k': '1:30 o\'clock', '8k': '1 o\'clock' }},
+                'Crisp Vocals & Detail': { description: 'Enhances vocal clarity and instrumental detail by focusing on upper-mid frequencies.', knobs: { '20': '12 o\'clock', '400': '11:30 o\'clock', '2k': '1 o\'clock', '8k': '1:30 o\'clock' }},
+                'Smooth & Relaxed': { description: 'Gently tames the upper frequencies for a non-fatiguing, laid-back listen, ideal for extended sessions.', knobs: { '20': '12:30 o\'clock', '400': '12:30 o\'clock', '2k': '11 o\'clock', '8k': '11 o\'clock' }},
+                'Late Night Listening': { description: 'A refined loudness curve that adds fullness at low volumes without creating boominess.', knobs: { '20': '1:30 o\'clock', '400': '12:30 o\'clock', '2k': '1 o\'clock', '8k': '1:30 o\'clock' }},
+                'Theater (Movies)': { description: 'Adds cinematic impact with powerful bass, clear dialogue, and detailed highs.', knobs: { '20': '2 o\'clock', '400': '12 o\'clock', '2k': '1:30 o\'clock', '8k': '1 o\'clock' }},
+                'Gaming': { description: 'Enhances positional audio cues and immersion by clarifying critical sound details like footsteps and environmental effects.', knobs: { '20': '1 o\'clock', '400': '11 o\'clock', '2k': '2 o\'clock', '8k': '1:30 o\'clock' }},
                 'genres': { type: 'separator', label: '--- GENRES ---' },
-                'Rock': { description: 'Adds punch to drums and crunch to guitars with a slight mid-cut for power.', knobs: { '20': '1 o\'clock', '400': '11 o\'clock', '2k': '12:30 o\'clock', '8k': '1:30 o\'clock' }},
-                'Pop': { description: 'Clean, deep bass and crisp, clear highs for a modern, polished sound.', knobs: { '20': '1:30 o\'clock', '400': '12 o\'clock', '2k': '1 o\'clock', '8k': '1:30 o\'clock' }},
-                'Jazz': { description: 'A focus on natural timbre and instrumental clarity. A very light touch to let the recording breathe.', knobs: { '20': '11:30 o\'clock', '400': '1 o\'clock', '2k': '1 o\'clock', '8k': '12 o\'clock' }},
-                'Acoustic': { description: 'Brings out the natural body and string detail of acoustic instruments.', knobs: { '20': '12 o\'clock', '400': '12:30 o\'clock', '2k': '1 o\'clock', '8k': '12:30 o\'clock' }},
-                'Classical': { description: 'A flat, pure setting with a hint of "air" to respect the wide dynamic range.', knobs: { '20': '12 o\'clock', '400': '12 o\'clock', '2k': '12:30 o\'clock', '8k': '1 o\'clock' }},
-                'Electronic/Dance': { description: 'Deep, controlled bass and exciting, shimmering highs for maximum energy.', knobs: { '20': '2 o\'clock', '400': '11:30 o\'clock', '2k': '12:30 o\'clock', '8k': '2 o\'clock' }},
+                'Rock': { description: 'Adds punch to drums and crunch to guitars. A slight mid-cut ensures power without muddiness.', knobs: { '20': '1 o\'clock', '400': '11:30 o\'clock', '2k': '12:30 o\'clock', '8k': '1:30 o\'clock' }},
+                'Pop': { description: 'Clean, deep sub-bass and crisp, clear highs for a modern, polished sound.', knobs: { '20': '1:30 o\'clock', '400': '12 o\'clock', '2k': '1 o\'clock', '8k': '1:30 o\'clock' }},
+                'Jazz': { description: 'A focus on natural timbre and instrumental clarity. A light touch lets the recording breathe.', knobs: { '20': '11:30 o\'clock', '400': '1 o\'clock', '2k': '1 o\'clock', '8k': '12 o\'clock' }},
+                'Metal': { description: 'A controlled mid-scoop for powerful, chugging guitars, with tight, fast bass that doesn\'t get muddy.', knobs: { '20': '12:30 o\'clock', '400': '10:30 o\'clock', '2k': '11 o\'clock', '8k': '2 o\'clock' }},
+                'Acoustic': { description: 'Brings out natural body and string detail. A slight sub-bass cut tightens the sound and prevents unwanted room boom.', knobs: { '20': '11 o\'clock', '400': '12:30 o\'clock', '2k': '1 o\'clock', '8k': '12:30 o\'clock' }},
+                'Classical': { description: 'A pure setting to respect the recording\'s dynamics, with a hint of "air" for spaciousness.', knobs: { '20': '12 o\'clock', '400': '12 o\'clock', '2k': '12:30 o\'clock', '8k': '1 o\'clock' }},
+                'Electronic/Dance': { description: 'Deep, powerful sub-bass shaped by the EQ for impact, with exciting highs.', knobs: { '20': '2 o\'clock', '400': '11:30 o\'clock', '2k': '12:30 o\'clock', '8k': '2 o\'clock' }},
+                'R&B': { description: 'Smooth, deep bass, warm and present vocals, and crisp hi-hats for a soulful, engaging sound.', knobs: { '20': '1:30 o\'clock', '400': '12:30 o\'clock', '2k': '1 o\'clock', '8k': '1:30 o\'clock' }},
+                'Rap': { description: 'Hard-hitting bass that remains tight and articulate, ensuring lyrical clarity is never compromised.', knobs: { '20': '2 o\'clock', '400': '12 o\'clock', '2k': '1:30 o\'clock', '8k': '1 o\'clock' }},
+                'Country': { description: 'Prioritizes vocal clarity and the natural twang of guitars, with a balanced and honest presentation.', knobs: { '20': '12 o\'clock', '400': '1 o\'clock', '2k': '1:30 o\'clock', '8k': '12 o\'clock' }},
+                'Funk & Soul': { description: 'Punchy, articulate bass lines and crisp, detailed horns and cymbals to drive the rhythm.', knobs: { '20': '1:30 o\'clock', '400': '11 o\'clock', '2k': '1 o\'clock', '8k': '1:30 o\'clock' }},
+                'special': { type: 'separator', label: '--- SPECIAL ---' },
+                'Fuzz Muff': { description: 'A heavy, saturated sound, refined for clarity and tight bass response.', knobs: { '20': '3 o\'clock', '400': '10 o\'clock', '2k': '11 o\'clock', '8k': '1 o\'clock' }},
+                'Vibe-o-Matic 5000': { description: 'A unique harmonic coloration with alternating boosts and cuts for a wavy, vintage feel.', knobs: { '20': '11 o\'clock', '400': '2 o\'clock', '2k': '10 o\'clock', '8k': '2:30 o\'clock' }}
             };
             
             // --- DOM ELEMENT REFERENCES ---
