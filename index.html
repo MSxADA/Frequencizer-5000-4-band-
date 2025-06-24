@@ -17,16 +17,16 @@
             -moz-osx-font-smoothing: grayscale;
         }
 
-        .purple-text {
-            color: #A78BFA;
+        .accent-text {
+            color: #42f5bc;
         }
 
-        .purple-border {
-            border-color: #A78BFA;
+        .accent-border {
+            border-color: #42f5bc;
         }
         
-        .focus-purple-ring:focus {
-            --tw-ring-color: #A78BFA;
+        .focus-accent-ring:focus {
+            --tw-ring-color: #42f5bc;
         }
 
         /* 3D Knob Styling */
@@ -39,7 +39,7 @@
 
         /* Knob Pointer Glow Effect */
         .knob-pointer {
-            filter: drop-shadow(0 0 3px #A78BFA);
+            filter: drop-shadow(0 0 4px #42f5bc);
             transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
         }
         
@@ -80,30 +80,30 @@
         }
 
         #eq-curve-path {
-            stroke: #A78BFA;
+            stroke: #42f5bc;
             stroke-width: 3;
             fill: none;
             stroke-linejoin: round;
             stroke-linecap: round;
-            filter: drop-shadow(0 0 3px #A78BFA);
+            filter: drop-shadow(0 0 4px #42f5bc);
         }
     </style>
 </head>
 <body class="bg-gray-800 text-gray-200 flex items-center justify-center min-h-screen p-4">
 
-    <div id="main-container" class="bg-gray-700 max-w-5xl w-full mx-auto p-6 sm:p-8 rounded-2xl shadow-2xl border-2 purple-border">
+    <div id="main-container" class="bg-gray-700 max-w-5xl w-full mx-auto p-6 sm:p-8 rounded-2xl shadow-2xl border-2 accent-border">
         
         <!-- Main Title -->
-        <h1 class="text-3xl sm:text-4xl font-bold text-center mb-6 sm:mb-8 purple-text tracking-wider">
+        <h1 class="text-3xl sm:text-4xl font-bold text-center mb-6 sm:mb-8 accent-text tracking-wider">
             The HIFI Harmonic Frequencizer 4000
         </h1>
 
         <!-- Controls: Dropdown and Description -->
         <div class="max-w-md mx-auto mb-8">
-            <select id="preset-selector" class="w-full p-3 bg-gray-600 border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus-purple-ring transition">
+            <select id="preset-selector" class="w-full p-3 bg-gray-600 border border-gray-500 rounded-lg focus:outline-none focus:ring-2 focus-accent-ring transition">
                 <option value="none" selected disabled>Select a Preset...</option>
             </select>
-            <p id="preset-description" class="mt-4 text-center text-sm purple-text h-12 flex items-center justify-center">
+            <p id="preset-description" class="mt-4 text-center text-sm accent-text h-12 flex items-center justify-center">
                 Select a preset from the dropdown to see its EQ curve and description.
             </p>
         </div>
@@ -120,53 +120,53 @@
             <!-- Knob 1: 20 Hz -->
             <div class="knob-container flex flex-col items-center" data-band="20" data-max-db="12">
                 <div class="font-bold">20 Hz</div>
-                <div class="text-sm purple-text">Sub-Bass</div>
+                <div class="text-sm accent-text">Sub-Bass</div>
                 <div class="relative w-[120px] h-[120px] flex items-center justify-center mt-8">
                     <div class="knob-body w-full h-full bg-gray-800 rounded-full"></div>
                     <div class="tick-container absolute w-full h-full"></div>
-                    <div class="knob-pointer absolute h-[50px] w-[3px] top-[10px] rounded-full" style="transform: rotate(0deg); transform-origin: bottom center; background-color: #A78BFA;"></div>
+                    <div class="knob-pointer absolute h-[50px] w-[3px] top-[10px] rounded-full" style="transform: rotate(0deg); transform-origin: bottom center; background-color: #42f5bc;"></div>
                 </div>
                 <div class="text-xs text-gray-300 mt-3">+/- 12dB</div>
-                <div class="db-display text-lg font-bold purple-text h-6 mt-1">0 dB</div>
+                <div class="db-display text-lg font-bold accent-text h-6 mt-1">0 dB</div>
             </div>
 
             <!-- Knob 2: 400 Hz -->
             <div class="knob-container flex flex-col items-center" data-band="400" data-max-db="6">
                 <div class="font-bold">400 Hz</div>
-                <div class="text-sm purple-text">Mids</div>
+                <div class="text-sm accent-text">Mids</div>
                 <div class="relative w-[120px] h-[120px] flex items-center justify-center mt-8">
                     <div class="knob-body w-full h-full bg-gray-800 rounded-full"></div>
                     <div class="tick-container absolute w-full h-full"></div>
-                    <div class="knob-pointer absolute h-[50px] w-[3px] top-[10px] rounded-full" style="transform: rotate(0deg); transform-origin: bottom center; background-color: #A78BFA;"></div>
+                    <div class="knob-pointer absolute h-[50px] w-[3px] top-[10px] rounded-full" style="transform: rotate(0deg); transform-origin: bottom center; background-color: #42f5bc;"></div>
                 </div>
                  <div class="text-xs text-gray-300 mt-3">+/- 6dB</div>
-                 <div class="db-display text-lg font-bold purple-text h-6 mt-1">0 dB</div>
+                 <div class="db-display text-lg font-bold accent-text h-6 mt-1">0 dB</div>
             </div>
 
             <!-- Knob 3: 2 kHz -->
             <div class="knob-container flex flex-col items-center" data-band="2k" data-max-db="6">
                 <div class="font-bold">2 kHz</div>
-                <div class="text-sm purple-text">Upper Mids</div>
+                <div class="text-sm accent-text">Upper Mids</div>
                 <div class="relative w-[120px] h-[120px] flex items-center justify-center mt-8">
                     <div class="knob-body w-full h-full bg-gray-800 rounded-full"></div>
                     <div class="tick-container absolute w-full h-full"></div>
-                    <div class="knob-pointer absolute h-[50px] w-[3px] top-[10px] rounded-full" style="transform: rotate(0deg); transform-origin: bottom center; background-color: #A78BFA;"></div>
+                    <div class="knob-pointer absolute h-[50px] w-[3px] top-[10px] rounded-full" style="transform: rotate(0deg); transform-origin: bottom center; background-color: #42f5bc;"></div>
                 </div>
                  <div class="text-xs text-gray-300 mt-3">+/- 6dB</div>
-                 <div class="db-display text-lg font-bold purple-text h-6 mt-1">0 dB</div>
+                 <div class="db-display text-lg font-bold accent-text h-6 mt-1">0 dB</div>
             </div>
 
             <!-- Knob 4: 8 kHz -->
             <div class="knob-container flex flex-col items-center" data-band="8k" data-max-db="12">
                 <div class="font-bold">8 kHz</div>
-                <div class="text-sm purple-text">Treble</div>
+                <div class="text-sm accent-text">Treble</div>
                 <div class="relative w-[120px] h-[120px] flex items-center justify-center mt-8">
                     <div class="knob-body w-full h-full bg-gray-800 rounded-full"></div>
                     <div class="tick-container absolute w-full h-full"></div>
-                    <div class="knob-pointer absolute h-[50px] w-[3px] top-[10px] rounded-full" style="transform: rotate(0deg); transform-origin: bottom center; background-color: #A78BFA;"></div>
+                    <div class="knob-pointer absolute h-[50px] w-[3px] top-[10px] rounded-full" style="transform: rotate(0deg); transform-origin: bottom center; background-color: #42f5bc;"></div>
                 </div>
                  <div class="text-xs text-gray-300 mt-3">+/- 12dB</div>
-                 <div class="db-display text-lg font-bold purple-text h-6 mt-1">0 dB</div>
+                 <div class="db-display text-lg font-bold accent-text h-6 mt-1">0 dB</div>
             </div>
 
         </div>
